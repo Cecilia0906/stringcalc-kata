@@ -8,6 +8,8 @@ class StringCalculator
 
         if (1 === count($numbers)  && "" !== $string) {
             return $numbers[0]; 
+        } else {
+            return array_sum($numbers);
         }
         return 0;
     }

@@ -13,6 +13,15 @@ class StringCalculatorTests extends PHPUnit_Framework_TestCase
         $this->assertSame($expected, $actual);
     }
 
+    public function testOneNumber()
+    {
+        $calculator = new StringCalculator();
+        $expected = 1;
+        $actual = $calculator->add("1");
+        $this->assertEquals($expected, $actual);
+        $actual = $calculator->add("2");
+        $this->assertEquals(2, $actual);
+    }
 }
 
 ?>

@@ -18,10 +18,12 @@ class StringCalculator
 
     private function checkNegatives($numbers)
     {
-        foreach ($numbers as $number) {
-            if ($number < 0) {
-                throw new InvalidArgumentException();
-            }
+        $negatives = array_filter($numbers, function($number) {
+                    return $number < 0;
+            });
+
+        if (count($negatives) > 0) {
+            throw new InvalidArgumentException();
         }
     }
 }

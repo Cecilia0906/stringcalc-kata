@@ -4,12 +4,12 @@ class StringCalculator
 {
     public function add($string)
     {
-        if ("" === $string) {
-            return 0;
-        } else {
-            return 1;
+        $numbers = explode(',', $string);
+
+        if (1 === count($numbers)  && "" !== $string) {
+            return $numbers[0]; 
         }
-        
+        return 0;
     }
 }
 

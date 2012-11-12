@@ -10,6 +10,7 @@ class StringCalculatorTests extends PHPUnit_Framework_TestCase
         $expected = 0;
         $actual = $calculator->add("");
         $this->assertTrue($expected === $actual);
+        $this->assertSame($expected, $actual);
     }
 
 }
